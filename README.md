@@ -1,5 +1,5 @@
-### NAME :
-### REGISTER NO :
+### NAME : YUVARANI T
+### REGISTER NO : 212222110057
 ### DATE:
 
 ## EX. NO.6         Implementation of Semantic ANalysis
@@ -21,10 +21,47 @@ Step 5:Iterate through each word in the tokenized text.</br>
 
 ### Program :
 ```
+# Import necessary libraries
+import nltk
+from nltk.tokenize import word_tokenize
+from nltk.corpus import wordnet
 
-<H3>Output</H3>
+# Download necessary NLTK data
+nltk.download('punkt')
+nltk.download('wordnet')
+nltk.download('averaged_perceptron_tagger')
 
-Show your results here
+# Input sentence
+sentence = input("Enter a sentence: ")
 
-<H3>Result:</H3>
+# Tokenize the sentence into words
+words = word_tokenize(sentence)
+
+# Identify the parts of speech for each word
+pos_tags = nltk.pos_tag(words)
+
+# Print the parts of speech
+print("Parts of Speech Tags:")
+for word, tag in pos_tags:
+    print(f"{word}: {tag}")
+
+# Identify synonyms and antonyms for each word
+synonyms = []
+antonyms = []
+
+for word in words:
+    for syn in wordnet.synsets(word):
+        for lemma in syn.lemmas():
+            synonyms.append(lemma.name())
+            if lemma.antonyms():
+                antonyms.append(lemma.antonyms()[0].name())
+
+# Print the synonyms and antonyms
+print("\nSynonyms:", set(synonyms))
+print("Antonyms:", set(antonyms))
+```
+## Output :
+![{2203F69B-97AD-4FE4-8FA1-72573D22462A}](https://github.com/user-attachments/assets/a12b9ece-ccf5-486c-a50b-a93793b52591)
+
+## Result:
 Thus ,the program to perform the Parts of Speech identification and Synonymis executed sucessfully.
