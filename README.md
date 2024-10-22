@@ -2,7 +2,7 @@
 ### REGISTER NO : 212222110057
 ### DATE:
 
-## EX. NO.6         Implementation of Semantic ANalysis
+## EX. NO.6         Implementation of Semantic Analysis
 
 ### Aim: 
 To perform Parts of speech identification and Synonym using Natural Language Processing (NLP) techniques.
