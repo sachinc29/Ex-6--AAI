@@ -1,5 +1,5 @@
-### NAME : YUVARANI T
-### REGISTER NO : 212222110057
+### NAME : SACHIN C
+### REGISTER NO : 212222230125
 ### DATE:
 
 ## EX. NO.6         Implementation of Semantic Analysis
